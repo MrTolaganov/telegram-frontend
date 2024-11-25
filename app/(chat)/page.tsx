@@ -289,7 +289,7 @@ export default function Page() {
   }
 
   useEffect(() => {
-    socketRef.current = io(process.env.WEBSOCKET_URI)
+    socketRef.current = io(process.env.WEBSOCKET_URI, { transports: ['websocket'] })
   }, [])
 
   useEffect(() => {
