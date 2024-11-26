@@ -75,7 +75,7 @@ export default function Settings() {
         </PopoverTrigger>
         <PopoverContent className='p-0 w-[100vw] md:w-[calc(100vw/4)]'>
           <h2 className='pt-2 pl-2 text-muted-foreground'>
-            Settings: <span className='text-white'>{session?.currentUser.email}</span>
+            Settings: <span className='text-foreground'>{session?.currentUser.email}</span>
           </h2>
           <Separator className='my-2' />
           <div className='flex flex-col px-4 md:px-2 mb-2'>
