@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   title: 'Telegram',
   description: 'Telegram web application clone created by Otabek Tulaganov',
   icons: { icon: '/logo.svg' },
+  openGraph: {
+    type: 'website',
+    title: 'Telegram',
+    description: 'Telegram web application clone created by Otabek Tulaganov',
+    images: 'https://linuxscriptshub.com/wp-content/uploads/2017/09/telegram.png',
+  },
 }
 
 export default function RootLayout({ children }: Readonly<ChildProps>) {
