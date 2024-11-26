@@ -40,8 +40,21 @@ export default function MessageCard({ message, onReaction, onDeleteMessage }: Pr
             {message.image && (
               <Image src={message.image} alt={message.image} width={200} height={150} />
             )}
-            {message.text.length > 0 && <p className='text-sm text-white'>{message.text}</p>}
-            <div className='text-[9px] right-1 bottom-0 absolute opacity-60 flex gap-[3px]'>
+            {message.text.length > 0 && (
+              <p
+                className={cn(
+                  'text-sm',
+                  message.receiver._id === currentContact?._id
+                    ? 'text-white'
+                    : 'text-black dark:text-foreground'
+                )}
+              >
+                {message.text}
+              </p>
+            )}
+            <div
+              className={cn('text-[9px] right-1 bottom-0 absolute flex gap-[3px] text-gray-300')}
+            >
               <p>{format(message.updatedAt, 'HH:mm')}</p>
               <div className='self-end'>
                 {message.receiver._id === currentContact?._id &&
